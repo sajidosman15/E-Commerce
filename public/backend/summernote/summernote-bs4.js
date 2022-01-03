@@ -253,7 +253,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.exten
       maximumFileSizeError: 'Maximum file size exceeded.',
       url: 'Image URL',
       remove: 'Remove Image',
-      original: 'Original'
+      original: 'Original',
     },
     video: {
       video: 'Video',
