@@ -363,7 +363,7 @@
                                         <ul>
 										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>${{number_format(Helper::totalCartPrice(),2)}}</span></li>
                                             <li class="shipping">
-                                                Shipping Cost
+                                                <label>Shipping Cost<span class="red">*</span></label>
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
                                                     <select name="shipping" class="nice-select">
                                                         <option value="">Select your address</option>
@@ -371,11 +371,13 @@
                                                         <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: ${{$shipping->price}}</option>
                                                         @endforeach
                                                     </select>
+                                                    @error('shipping')
+                                                        <span class='text-danger'>{{$message}}</span>
+                                                    @enderror
                                                 @else 
                                                     <span>Free</span>
                                                 @endif
                                             </li>
-                                            
                                             @if(session('coupon'))
                                             <li class="coupon_price" data-price="{{session('coupon')['value']}}">You Save<span>${{number_format(session('coupon')['value'],2)}}</span></li>
                                             @endif
@@ -404,6 +406,10 @@
                                                 <input name="payment_method"  type="radio" value="cod"> <label> Cash On Delivery</label><br>
                                                 <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label> 
                                             </form-group>
+                                            <br>
+                                            @error('payment_method')
+                                                <span class='text-danger'>{{$message}}</span>
+                                            @enderror
                                             
                                         </div>
                                     </div>
@@ -542,6 +548,9 @@
 		.form-select .nice-select::after {
 			top: 14px;
 		}
+        .red{
+            color:red;
+        }
 	</style>
 @endpush
 @push('scripts')
