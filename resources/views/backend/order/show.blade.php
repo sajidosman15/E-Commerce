@@ -139,6 +139,42 @@
               </table>
             </div>
           </div>
+
+          <span style="display:block;background-color:white;height:10px;width:100%"></span>
+          <div class="col-lg-6 col-lx-4">
+            <div class="order-info">
+              <h4 class="text-center pb-4">PRODUCT INFORMATION</h4>
+              <table class="table">
+                @foreach($order->products as $product)
+                  <tr>
+                    <td>Product Id</td>
+                    <td> : {{$product->id}}</td>
+                  </tr>
+                  <tr>
+                    <td>Product Title</td>
+                    <td> : {{$product->title}}</td>
+                  </tr>
+                  <tr>
+                    @php
+                          $category=DB::table('categories')->where('id',$product->cat_id)->pluck('title');
+                    @endphp
+                    <td>Product Category</td>
+                    <td> : {{$category[0]}}</td>
+                  </tr>
+                  <tr>
+                    <td>Quantity</td>
+                    <td> : {{$product->quantity[0]->quantity}}</td>
+                  </tr>
+                  <tr class="borderClass">
+                    <td>Amount</td>
+                    <td> : {{$product->amount[0]->amount}}</td>
+                  </tr>
+                @endforeach   
+              </table>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </section>
@@ -156,6 +192,9 @@
     }
     .order-info h4,.shipping-info h4{
         text-decoration: underline;
+    }
+    .borderClass{
+      border-bottom:2px solid black;
     }
 
 </style>

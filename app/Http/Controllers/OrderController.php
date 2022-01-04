@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\Shipping;
 use App\User;
 use PDF;
@@ -162,8 +163,23 @@ class OrderController extends Controller
     public function show($id)
     {
         $order=Order::find($id);
+        $fromcart=Cart::where('order_id','=',$order->id)->get();
+        $productArray;
+        for($i=0;$i<count($fromcart);$i++){
+            $productArray[$i]=$fromcart[$i]->product_id;
+        }
+        $product=Product::whereIn('id', $productArray)->get();
+
+        for($i=0;$i<count($fromcart);$i++){
+            $product[$i]->amount=Cart::select('amount')->where('order_id','=',$order->id)->where('product_id','=',$product[$i]->id)->get();
+            $product[$i]->quantity=Cart::select('quantity')->where('order_id','=',$order->id)->where('product_id','=',$product[$i]->id)->get();
+        }
+        $order->products=$product;
         // return $order;
         return view('backend.order.show')->with('order',$order);
+
+        // return response()->json($order->products[0]->quantity); 
+
     }
 
     /**
