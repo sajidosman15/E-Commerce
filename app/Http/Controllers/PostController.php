@@ -21,6 +21,7 @@ class PostController extends Controller
         $posts=Post::getAllPost();
         // return $posts;
         return view('backend.post.index')->with('posts',$posts);
+        
     }
 
     /**
