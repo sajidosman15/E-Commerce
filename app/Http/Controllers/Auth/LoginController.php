@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Socialite;
+use Session;
 use App\User;
 use Auth;
 class LoginController extends Controller
@@ -58,6 +59,7 @@ class LoginController extends Controller
         // dd($users);
         if($users){
             Auth::login($users);
+            Session::put('user',$users['email']);
             return redirect('/')->with('success','You are login from '.$provider);
         }else{
             $user = User::create([
