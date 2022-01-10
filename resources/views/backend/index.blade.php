@@ -12,7 +12,7 @@
     <div class="row">
 
       <!-- Category -->
-      <div class="col-xl-3 col-md-6 mb-4">
+      <div class="col-xl-4 col-md-6 mb-4">
         <div class="card border-left-primary bg-primary shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
@@ -29,7 +29,7 @@
       </div>
 
       <!-- Products -->
-      <div class="col-xl-3 col-md-6 mb-4">
+      <div class="col-xl-4 col-md-6 mb-4">
         <div class="card border-left-success bg-success shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
@@ -46,7 +46,7 @@
       </div>
 
       <!-- Order -->
-      <div class="col-xl-3 col-md-6 mb-4">
+      <div class="col-xl-4 col-md-6 mb-4">
         <div class="card border-left-danger bg-danger shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
@@ -68,7 +68,7 @@
       </div>
 
       <!--Posts-->
-      <div class="col-xl-3 col-md-6 mb-4">
+      <!-- <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-warning bg-warning shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
@@ -84,7 +84,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row"> -->
 
       <!-- Area Chart -->
       <div class="col-xl-8 col-lg-7">
