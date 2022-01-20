@@ -182,20 +182,21 @@ Version:1.0
 	font-weight: 500;
 	font-size:14px;
 	color: #fff;
-	background: #333;
+	background: #2874f0;
 	display: inline-block;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	z-index: 5;
 	display: inline-block;
-	padding: 13px 32px;
+	padding: 10px 32px;
 	border-radius: 0px;
 	text-transform:uppercase;
+	border-radius: 20px;
 }
 .btn:hover{
 	color:#fff;
-	background:#F7941D;
+	background:#ff2c18;
 }
 #scrollUp {
 	right: 10px;
@@ -711,7 +712,7 @@ Version:1.0
 	text-align: center;
 	font-size: 18px;
 	color: #fff;
-	background: #333333;
+	background: #161623;
 	position: absolute;
 	right: -2px;
 	top: -1px;
@@ -745,7 +746,7 @@ Version:1.0
 	border:none;
 }
 .header.shop .header-inner {
-	background: #333;
+	background: #2874f0;
 }
 .header.shop.v3 .header-inner {
 	background: transparent;
@@ -957,7 +958,7 @@ Version:1.0
 }
 .header.shop .nav li:hover a{
 	color:#fff;
-	background:#F7941D;
+	background:#090088;
 }
 .header.shop.v2 .nav li:hover a{
 	color:#F7941D;
@@ -965,7 +966,7 @@ Version:1.0
 }
 .header.shop .nav li.active a{
 	color:#fff;
-	background:#F7941D;
+	background:#090088;
 }
 .header.shop.v2 .nav li.active a{
 	color:#333 !important;
@@ -978,14 +979,14 @@ Version:1.0
 	margin:0;
 }
 .header.shop .nav li .dropdown li:hover a{
-	background:#F7941D;
+	background:#090088;
 }
 .header.shop.v2 .nav li.active .dropdown li a{
-	color:#333 !important;
+	color:white !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
 	color:#fff !important;
-	background:#F7941D !important;
+	background:#090088 !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
 	color:#fff !important;
@@ -1012,10 +1013,10 @@ Version:1.0
 }
 .header.shop.v2 .nav li .dropdown li a:hover{
 	color:#fff !important;
-	background:#F7941D;
+	background:#090088;
 }
 .header.shop .nav li .dropdown li .dropdown.sub-dropdown li a:hover{
-	background:#F7941D;
+	background:#090088;
 }
 .header.shop .right-bar {
 	display: inline-block;
@@ -1592,6 +1593,8 @@ Version:1.0
 }
 .midium-banner .single-banner{
 	position:relative;
+	box-shadow: 0px 0px 15px #0000001a;
+    padding: 10px;
 }
 .midium-banner .single-banner img{
 	height:100%;
@@ -1747,6 +1750,8 @@ Version:1.0
 /* Sinlge Product */
 .single-product{
 	margin-top:50px;
+	box-shadow: 0px 0px 15px #0000001a;
+	padding: 10px;
 }
 .single-product .product-img {
   position: relative;
@@ -2181,6 +2186,11 @@ Version:1.0
 	left:0;
 	top:0;
 	border-radius:100%;
+	transition: 2s;
+}
+.shop-sidebar .single-post .image img:hover{
+	transform: scale(1.5);
+	
 }
 .shop-sidebar .single-post .content{
 	padding-left:100px;
@@ -3433,16 +3443,18 @@ Version:1.0
 }
 .shop.login .form button {
 	border: none;
+	
 }
 .shop.login .form .btn {
 	display: inline-block;
 	margin-right: 10px;
-	height: 46px;
+	height: 40px;
 	color: #fff;
 	line-height: 20px;
+	border-radius: 10px;
 }
 .shop.login .form .btn:hover{
-	background:#F7941D;
+	background:#1308a3;
 	color:#fff;
 }
 .shop.login .login-form .checkbox {
@@ -3796,7 +3808,7 @@ Version:1.0
 	padding: 10px 30px;
 	position: relative;
 	top: 0;
-	background: #F7941D;
+	background: #e90052;
 	color: #fff;
 	left: -4px;
 	border-radius: 0 30px 30px 0;
@@ -3805,7 +3817,7 @@ Version:1.0
 	text-transform: uppercase;
 }
 .shop-newsletter .newsletter-inner .btn:hover{
-	background:#333;
+	background: #161623;
 	color:#fff;
 }
 /*======================================
@@ -3851,7 +3863,7 @@ Version:1.0
 .about-us .about-content h3 span{
 	display:inline-block;
 	font-weight:700;
-	color:#F7941D;
+	color:#e90052;
 }
 .about-us .about-content p {
 	line-height: 26px;
@@ -3864,7 +3876,7 @@ Version:1.0
 	margin-top:40px;
 }
 .about-us .about-content .button .btn{
-	background:#333;
+	background:#161623;
 	color:#fff;
 	margin-right:15px;
 }
@@ -3873,11 +3885,11 @@ Version:1.0
 	color:#fff;
 }
 .about-us .about-content .button .btn.primary{
-	background:#F7941D;
+	background:#e90052;
 	color:#fff;
 }
 .about-us .about-content .button .btn.primary:hover{
-	background:#333;
+	background:#161623;
 	color:#fff;
 }
 .about-us .about-content .button .btn:last-child{
@@ -4809,7 +4821,7 @@ Version:1.0
 	20. Start Footer CSS
 ===============================*/
 .footer{
-	background:#222;
+	background:#161623;
 }
 .footer .about {
 	padding-right: 50px;
