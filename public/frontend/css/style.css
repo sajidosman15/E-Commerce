@@ -35,6 +35,17 @@ Version:1.0
 20. 404 Error CSS
 21. Footer CSS
 ========================================*/
+
+:root{
+	--pink: #e90052;
+	--darkblue: #090088;
+	--blue: #2874f0;
+	--mint: #68c4af;
+	--blackRussian: #161623;
+	--green: #28a745;
+}
+
+
 .color-plate {
 	position: fixed;
 	display: block;
@@ -182,21 +193,24 @@ Version:1.0
 	font-weight: 500;
 	font-size:14px;
 	color: #fff;
-	background: #2874f0;
+	background: var(--blue);
 	display: inline-block;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	z-index: 5;
 	display: inline-block;
-	padding: 10px 32px;
-	border-radius: 0px;
+	padding: 10px 24px;
+	/* border-radius: 0px; */
 	text-transform:uppercase;
-	border-radius: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+	transition: background-color .8s;
 }
 .btn:hover{
 	color:#fff;
-	background:#ff2c18;
+	background-color: var(--darkblue);
+	
 }
 #scrollUp {
 	right: 10px;
@@ -599,7 +613,7 @@ Version:1.0
 	font-weight: 500;
 }
 .header .shopping-item .bottom .btn:hover{
-	background:#F7941D;
+	background: var(--pink);
 	color:#fff;
 }
 .header.shop{
@@ -724,7 +738,7 @@ Version:1.0
 }
 .header.shop .search-bar .btnn:hover{
 	color:#fff;
-	background:#F7941D;
+	opacity: .8;
 }
 /* Search Form */
 .header.shop .search-top {
@@ -746,7 +760,7 @@ Version:1.0
 	border:none;
 }
 .header.shop .header-inner {
-	background: #2874f0;
+	background: var(--blue);
 }
 .header.shop.v3 .header-inner {
 	background: transparent;
@@ -958,7 +972,7 @@ Version:1.0
 }
 .header.shop .nav li:hover a{
 	color:#fff;
-	background:#090088;
+	background: var(--darkblue);
 }
 .header.shop.v2 .nav li:hover a{
 	color:#F7941D;
@@ -966,7 +980,7 @@ Version:1.0
 }
 .header.shop .nav li.active a{
 	color:#fff;
-	background:#090088;
+	background:var(--darkblue);
 }
 .header.shop.v2 .nav li.active a{
 	color:#333 !important;
@@ -979,14 +993,14 @@ Version:1.0
 	margin:0;
 }
 .header.shop .nav li .dropdown li:hover a{
-	background:#090088;
+	background:var(--darkblue);
 }
 .header.shop.v2 .nav li.active .dropdown li a{
 	color:white !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
 	color:#fff !important;
-	background:#090088 !important;
+	background:var(--darkblue) !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
 	color:#fff !important;
@@ -1013,10 +1027,10 @@ Version:1.0
 }
 .header.shop.v2 .nav li .dropdown li a:hover{
 	color:#fff !important;
-	background:#090088;
+	background: var(--darkblue);
 }
 .header.shop .nav li .dropdown li .dropdown.sub-dropdown li a:hover{
-	background:#090088;
+	background: var(--darkblue);
 }
 .header.shop .right-bar {
 	display: inline-block;
@@ -1752,6 +1766,7 @@ Version:1.0
 	margin-top:50px;
 	box-shadow: 0px 0px 15px #0000001a;
 	padding: 10px;
+	border-radius: 5px;
 }
 .single-product .product-img {
   position: relative;
@@ -1764,6 +1779,7 @@ Version:1.0
 }
 .single-product .product-img a img {
   width: 100%;
+  height: 200px;
 }
 .single-product .product-img a img.hover-img {
   position: absolute;
@@ -1774,7 +1790,8 @@ Version:1.0
   transition: opacity 0.5s ease, transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
 }
 .single-product .product-img a span.price-dec {
-	background-color: #f6931d;
+	background: rgb(255,154,0);
+	background: linear-gradient(125deg, rgba(255,154,0,1) 16%, rgba(255,0,0,1) 61%);
 	display: inline-block;
 	font-size: 11px;
 	color: #fff;
@@ -1825,7 +1842,7 @@ Version:1.0
 	line-height: 24px;
 }
 .single-product .product-img a span.out-of-stock {
-	background-color: #ed1b24;
+	background-color: var(--pink);
 	display: inline-block;
 	font-size: 11px;
 	color: #fff;
@@ -2323,6 +2340,7 @@ Version:1.0
 }
 .shop.single .product-gallery .slides li img{
 	width:100%;
+	border-radius: 5px;
 }
 .shop.single .flex-control-nav{
 	margin-top:15px;
@@ -2395,7 +2413,7 @@ Version:1.0
 .shop.single .product-des .price span{
 	display:inline-block;
 	margin-right:15px;
-	color:#F7941D;
+	color: var(--green);
 }
 .shop.single .product-des .product-buy {
 	margin-top: 40px;
@@ -2556,20 +2574,20 @@ Version:1.0
 	text-transform: capitalize;
 	margin-right: 5px;
 	border-radius: 0px;
-	background: #333;
+	background: var(--blackRussian);
 	color: #fff;
 	display: inline-block;
 	font-weight: 500;
 }
 .shop.single .add-to-cart .btn:hover{
 	color:#fff;
-	background:#F7941D;
+	background: var(--pink);
 }
 .shop.single .add-to-cart .btn.min {
 	padding: 0 20px;
 	font-size: 17px;
 	position: relative;
-	top: 1px;
+	top: 0;
 	line-height: 45px;
 }
 .shop.single .cat{
@@ -2618,9 +2636,10 @@ Version:1.0
 }
 .shop.single .nav-tabs li a.active,
 .shop.single .nav-tabs li:hover a{
-	background:#F7941D;
+	background: var(--pink);
 	color:#fff;
 	border-color:transparent;
+	border-radius: 5px;
 }
 .shop.single .tab-single {
 	
@@ -2804,7 +2823,7 @@ Version:1.0
 	position: relative;
 }
 .shop.single .form .form-group label span {
-	color: #ff2c18;
+	color: var(--pink);
 	display: inline-block;
 	position: absolute;
 	right: -12px;
@@ -2927,7 +2946,8 @@ Version:1.0
 .shop-home-list .single-list .content .price {
 	margin-top: 15px;
 	font-weight: 500;
-	background: #f7941d;
+	background: rgb(255,154,0);
+	background: linear-gradient(125deg, rgba(255,154,0,1) 16%, rgba(255,0,0,1) 61%);
 	display: inline-block;
 	color: #fff;
 	padding: 2px 18px;
@@ -3094,7 +3114,7 @@ Version:1.0
 }
 .shopping-cart .total-amount .left .coupon form .btn:hover{
 	background:#fff;
-	color:#F7941D;
+	color:var(--pink);
 }
 .shopping-cart .total-amount .left label{
 	font-size:22px;
@@ -3179,13 +3199,20 @@ Version:1.0
 }
 .shopping-cart .total-amount .right .button5 .btn {
 	text-align: center;
-	border-radius: 0;
+	border-radius: 5px;
 	width: 100%;
 	margin-top: 10px;
+	padding-top: 14px;
 	height: 46px;
 	line-height: 18px;
 	font-size: 13px;
 	color: #fff;
+	background: var(--green);
+	
+}
+.shopping-cart .total-amount .right .button5 .btn:hover{
+	background: green;
+	
 }
 /*======================================
    End Shopping Cart CSS
@@ -3293,6 +3320,7 @@ Version:1.0
 	background: #fff;
 	padding: 15px 0 30px 0;
 	border: 1px solid #eee;
+	background: 	#e0f0e3;
 }
 .shop.checkout .single-widget {
 	margin-bottom: 30px;
@@ -3363,9 +3391,13 @@ Version:1.0
 	width: 100%;
 	line-height: 19px;
 	text-align: center;
-	border-radius: 0;
+	border-radius: 5px;
 	text-transform: uppercase;
+	background: var(--blackRussian);
 	color: #fff;
+}
+.shop.checkout .single-widget.get-button .btn:hover{
+	background: var(--green);
 }
 /*======================================
    End Checkout Form CSS
@@ -3451,7 +3483,8 @@ Version:1.0
 	height: 40px;
 	color: #fff;
 	line-height: 20px;
-	border-radius: 10px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
 }
 .shop.login .form .btn:hover{
 	background:#1308a3;
@@ -3527,7 +3560,7 @@ Version:1.0
    Start Shop List CSS
 ========================================*/
 .shop-list .list-content{
-	margin-top:50px;
+	margin-top:75px;
 }
 .shop-list .list-content .product-price{}
 .shop-list .list-content .product-price span {
@@ -3575,7 +3608,7 @@ Version:1.0
 	padding: 13px 32px;
 }
 .shop-list .list-content .btn:hover{
-	background:#F7941D;
+	background: var(--mint);
 	color:#fff;
 	border-color:transparent;
 }
@@ -3885,11 +3918,11 @@ Version:1.0
 	color:#fff;
 }
 .about-us .about-content .button .btn.primary{
-	background:#e90052;
+	background:var(--pink);
 	color:#fff;
 }
 .about-us .about-content .button .btn.primary:hover{
-	background:#161623;
+	background: var(--darkblue);
 	color:#fff;
 }
 .about-us .about-content .button .btn:last-child{
@@ -4637,6 +4670,7 @@ Version:1.0
 	padding: 50px;
 	box-shadow: 0px 0px 15px #0000001a;
 	height: 100%;
+	background: #e0f0e3;
 }
 .contact-us .single-info {
 	text-align: left;
@@ -4716,6 +4750,10 @@ Version:1.0
 .contact-us .form .button .btn {
 	height: 50px;
 	border: none;
+	background: var(--blackRussian);
+}
+.contact-us .form .button .btn:hover{
+	background: var(--green);
 }
 #myMap {
 	height: 500px;
