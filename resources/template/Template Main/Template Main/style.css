@@ -35,17 +35,6 @@ Version:1.0
 20. 404 Error CSS
 21. Footer CSS
 ========================================*/
-
-:root{
-	--pink: #e90052;
-	--darkblue: #090088;
-	--blue: #2874f0;
-	--mint: #68c4af;
-	--blackRussian: #161623;
-	--green: #28a745;
-}
-
-
 .color-plate {
 	position: fixed;
 	display: block;
@@ -193,24 +182,20 @@ Version:1.0
 	font-weight: 500;
 	font-size:14px;
 	color: #fff;
-	background: var(--blue);
+	background: #333;
 	display: inline-block;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	z-index: 5;
 	display: inline-block;
-	padding: 10px 24px;
-	/* border-radius: 0px; */
+	padding: 13px 32px;
+	border-radius: 0px;
 	text-transform:uppercase;
-	border-radius: 5px;
-	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
-	transition: background-color .8s;
 }
 .btn:hover{
 	color:#fff;
-	background-color: var(--darkblue);
-	
+	background:#F7941D;
 }
 #scrollUp {
 	right: 10px;
@@ -330,7 +315,7 @@ Version:1.0
 	background: #fff;
     width: 220px;
     position: absolute;
-    left: 200px;
+    left: 186px;
     top: 0;
     z-index: 999;
    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
@@ -613,7 +598,7 @@ Version:1.0
 	font-weight: 500;
 }
 .header .shopping-item .bottom .btn:hover{
-	background: var(--pink);
+	background:#F7941D;
 	color:#fff;
 }
 .header.shop{
@@ -658,7 +643,7 @@ Version:1.0
 	position: relative;
 }
 .header.shop .search-bar {
-	width: 387px;
+	width: 535px;
 	height: 50px;
 	display: inline-block;
 	background: #fff;
@@ -726,7 +711,7 @@ Version:1.0
 	text-align: center;
 	font-size: 18px;
 	color: #fff;
-	background: #161623;
+	background: #333333;
 	position: absolute;
 	right: -2px;
 	top: -1px;
@@ -738,7 +723,7 @@ Version:1.0
 }
 .header.shop .search-bar .btnn:hover{
 	color:#fff;
-	opacity: .8;
+	background:#F7941D;
 }
 /* Search Form */
 .header.shop .search-top {
@@ -760,7 +745,7 @@ Version:1.0
 	border:none;
 }
 .header.shop .header-inner {
-	background: var(--blue);
+	background: #333;
 }
 .header.shop.v3 .header-inner {
 	background: transparent;
@@ -972,7 +957,7 @@ Version:1.0
 }
 .header.shop .nav li:hover a{
 	color:#fff;
-	background: var(--darkblue);
+	background:#F7941D;
 }
 .header.shop.v2 .nav li:hover a{
 	color:#F7941D;
@@ -980,7 +965,7 @@ Version:1.0
 }
 .header.shop .nav li.active a{
 	color:#fff;
-	background:var(--darkblue);
+	background:#F7941D;
 }
 .header.shop.v2 .nav li.active a{
 	color:#333 !important;
@@ -993,14 +978,14 @@ Version:1.0
 	margin:0;
 }
 .header.shop .nav li .dropdown li:hover a{
-	background:var(--darkblue);
+	background:#F7941D;
 }
 .header.shop.v2 .nav li.active .dropdown li a{
-	color:white !important;
+	color:#333 !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
 	color:#fff !important;
-	background:var(--darkblue) !important;
+	background:#F7941D !important;
 }
 .header.shop.v2 .nav li.active .dropdown li a:hover{
 	color:#fff !important;
@@ -1027,10 +1012,10 @@ Version:1.0
 }
 .header.shop.v2 .nav li .dropdown li a:hover{
 	color:#fff !important;
-	background: var(--darkblue);
+	background:#F7941D;
 }
 .header.shop .nav li .dropdown li .dropdown.sub-dropdown li a:hover{
-	background: var(--darkblue);
+	background:#F7941D;
 }
 .header.shop .right-bar {
 	display: inline-block;
@@ -1607,8 +1592,6 @@ Version:1.0
 }
 .midium-banner .single-banner{
 	position:relative;
-	box-shadow: 0px 0px 15px #0000001a;
-    padding: 10px;
 }
 .midium-banner .single-banner img{
 	height:100%;
@@ -1764,9 +1747,6 @@ Version:1.0
 /* Sinlge Product */
 .single-product{
 	margin-top:50px;
-	box-shadow: 0px 0px 15px #0000001a;
-	padding: 10px;
-	border-radius: 5px;
 }
 .single-product .product-img {
   position: relative;
@@ -1779,7 +1759,6 @@ Version:1.0
 }
 .single-product .product-img a img {
   width: 100%;
-  height: 200px;
 }
 .single-product .product-img a img.hover-img {
   position: absolute;
@@ -1790,8 +1769,7 @@ Version:1.0
   transition: opacity 0.5s ease, transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
 }
 .single-product .product-img a span.price-dec {
-	background: rgb(255,154,0);
-	background: linear-gradient(125deg, rgba(255,154,0,1) 16%, rgba(255,0,0,1) 61%);
+	background-color: #f6931d;
 	display: inline-block;
 	font-size: 11px;
 	color: #fff;
@@ -1824,25 +1802,8 @@ Version:1.0
 	height: 26px;
 	line-height: 24px;
 }
-.single-product .product-img a span.hot {
-	background-color: #2cc95b;
-	display: inline-block;
-	font-size: 11px;
-	color: #fff;
-	right: 20px;
-	top: 20px;
-	padding: 1px 16px;
-	font-weight: 700;
-	border-radius: 0;
-	text-align: center;
-	position: absolute;
-	text-transform: uppercase;
-	border-radius: 30px;
-	height: 26px;
-	line-height: 24px;
-}
 .single-product .product-img a span.out-of-stock {
-	background-color: var(--pink);
+	background-color: #ed1b24;
 	display: inline-block;
 	font-size: 11px;
 	color: #fff;
@@ -2203,11 +2164,6 @@ Version:1.0
 	left:0;
 	top:0;
 	border-radius:100%;
-	transition: 2s;
-}
-.shop-sidebar .single-post .image img:hover{
-	transform: scale(1.5);
-	
 }
 .shop-sidebar .single-post .content{
 	padding-left:100px;
@@ -2340,7 +2296,6 @@ Version:1.0
 }
 .shop.single .product-gallery .slides li img{
 	width:100%;
-	border-radius: 5px;
 }
 .shop.single .flex-control-nav{
 	margin-top:15px;
@@ -2413,7 +2368,7 @@ Version:1.0
 .shop.single .product-des .price span{
 	display:inline-block;
 	margin-right:15px;
-	color: var(--green);
+	color:#F7941D;
 }
 .shop.single .product-des .product-buy {
 	margin-top: 40px;
@@ -2574,20 +2529,20 @@ Version:1.0
 	text-transform: capitalize;
 	margin-right: 5px;
 	border-radius: 0px;
-	background: var(--blackRussian);
+	background: #333;
 	color: #fff;
 	display: inline-block;
 	font-weight: 500;
 }
 .shop.single .add-to-cart .btn:hover{
 	color:#fff;
-	background: var(--pink);
+	background:#F7941D;
 }
 .shop.single .add-to-cart .btn.min {
 	padding: 0 20px;
 	font-size: 17px;
 	position: relative;
-	top: 0;
+	top: 1px;
 	line-height: 45px;
 }
 .shop.single .cat{
@@ -2636,10 +2591,9 @@ Version:1.0
 }
 .shop.single .nav-tabs li a.active,
 .shop.single .nav-tabs li:hover a{
-	background: var(--pink);
+	background:#F7941D;
 	color:#fff;
 	border-color:transparent;
-	border-radius: 5px;
 }
 .shop.single .tab-single {
 	
@@ -2823,7 +2777,7 @@ Version:1.0
 	position: relative;
 }
 .shop.single .form .form-group label span {
-	color: var(--pink);
+	color: #ff2c18;
 	display: inline-block;
 	position: absolute;
 	right: -12px;
@@ -2946,8 +2900,7 @@ Version:1.0
 .shop-home-list .single-list .content .price {
 	margin-top: 15px;
 	font-weight: 500;
-	background: rgb(255,154,0);
-	background: linear-gradient(125deg, rgba(255,154,0,1) 16%, rgba(255,0,0,1) 61%);
+	background: #f7941d;
 	display: inline-block;
 	color: #fff;
 	padding: 2px 18px;
@@ -3114,7 +3067,7 @@ Version:1.0
 }
 .shopping-cart .total-amount .left .coupon form .btn:hover{
 	background:#fff;
-	color:var(--pink);
+	color:#F7941D;
 }
 .shopping-cart .total-amount .left label{
 	font-size:22px;
@@ -3199,20 +3152,13 @@ Version:1.0
 }
 .shopping-cart .total-amount .right .button5 .btn {
 	text-align: center;
-	border-radius: 5px;
+	border-radius: 0;
 	width: 100%;
 	margin-top: 10px;
-	padding-top: 14px;
 	height: 46px;
 	line-height: 18px;
 	font-size: 13px;
 	color: #fff;
-	background: var(--green);
-	
-}
-.shopping-cart .total-amount .right .button5 .btn:hover{
-	background: green;
-	
 }
 /*======================================
    End Shopping Cart CSS
@@ -3320,7 +3266,6 @@ Version:1.0
 	background: #fff;
 	padding: 15px 0 30px 0;
 	border: 1px solid #eee;
-	background: 	#e0f0e3;
 }
 .shop.checkout .single-widget {
 	margin-bottom: 30px;
@@ -3376,7 +3321,57 @@ Version:1.0
 	padding: 0px 30px;
 	margin-top:30px;
 }
-
+.shop.checkout .single-widget .checkbox label {
+	color: #555555;
+	position: relative;
+	font-size: 14px;
+	padding-left: 20px;
+	margin-top: -5px;
+	font-weight: 400;
+	display: block;
+	margin-bottom: 15px;
+}
+.shop.checkout .single-widget .checkbox label:last-child{
+	margin-bottom:0;
+}
+.shop.checkout .single-widget .checkbox label:hover{
+	cursor:pointer;
+}
+.shop.checkout .single-widget .checkbox label input{
+	display:none;
+}
+.shop.checkout .single-widget .checkbox label::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 7px;
+	width: 12px;
+	height: 12px;
+	line-height: 16px;
+	border: 1px solid #666;
+	border-radius: 100%;
+}
+.shop.checkout .single-widget .checkbox label::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 7px;
+	width: 12px;
+	height: 12px;
+	line-height: 16px;
+	border-radius: 100%;
+	display:block;
+	background:#666;
+	transform:scale(0);
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+.shop.checkout .single-widget .checkbox label.checked::after{
+	opacity:1;
+	visibility:visible;
+	transform:scale(1);
+}
 .shop.checkout .single-widget.payement {
 	padding: 0px 38px;
 	text-align: center;
@@ -3391,13 +3386,9 @@ Version:1.0
 	width: 100%;
 	line-height: 19px;
 	text-align: center;
-	border-radius: 5px;
+	border-radius: 0;
 	text-transform: uppercase;
-	background: var(--blackRussian);
 	color: #fff;
-}
-.shop.checkout .single-widget.get-button .btn:hover{
-	background: var(--green);
 }
 /*======================================
    End Checkout Form CSS
@@ -3475,19 +3466,16 @@ Version:1.0
 }
 .shop.login .form button {
 	border: none;
-	
 }
 .shop.login .form .btn {
 	display: inline-block;
 	margin-right: 10px;
-	height: 40px;
+	height: 46px;
 	color: #fff;
 	line-height: 20px;
-	border-radius: 5px;
-	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
 }
 .shop.login .form .btn:hover{
-	background:#1308a3;
+	background:#F7941D;
 	color:#fff;
 }
 .shop.login .login-form .checkbox {
@@ -3560,7 +3548,7 @@ Version:1.0
    Start Shop List CSS
 ========================================*/
 .shop-list .list-content{
-	margin-top:75px;
+	margin-top:50px;
 }
 .shop-list .list-content .product-price{}
 .shop-list .list-content .product-price span {
@@ -3608,7 +3596,7 @@ Version:1.0
 	padding: 13px 32px;
 }
 .shop-list .list-content .btn:hover{
-	background: var(--mint);
+	background:#F7941D;
 	color:#fff;
 	border-color:transparent;
 }
@@ -3682,7 +3670,7 @@ Version:1.0
 .cown-down .content .heading-block{
 	position:absolute;
 	left:0;
-	top:26%;
+	top:50%;
 	transform:translateY(-50%);
 	padding: 75px;
 }
@@ -3841,7 +3829,7 @@ Version:1.0
 	padding: 10px 30px;
 	position: relative;
 	top: 0;
-	background: #e90052;
+	background: #F7941D;
 	color: #fff;
 	left: -4px;
 	border-radius: 0 30px 30px 0;
@@ -3850,7 +3838,7 @@ Version:1.0
 	text-transform: uppercase;
 }
 .shop-newsletter .newsletter-inner .btn:hover{
-	background: #161623;
+	background:#333;
 	color:#fff;
 }
 /*======================================
@@ -3896,7 +3884,7 @@ Version:1.0
 .about-us .about-content h3 span{
 	display:inline-block;
 	font-weight:700;
-	color:#e90052;
+	color:#F7941D;
 }
 .about-us .about-content p {
 	line-height: 26px;
@@ -3909,7 +3897,7 @@ Version:1.0
 	margin-top:40px;
 }
 .about-us .about-content .button .btn{
-	background:#161623;
+	background:#333;
 	color:#fff;
 	margin-right:15px;
 }
@@ -3918,11 +3906,11 @@ Version:1.0
 	color:#fff;
 }
 .about-us .about-content .button .btn.primary{
-	background:var(--pink);
+	background:#F7941D;
 	color:#fff;
 }
 .about-us .about-content .button .btn.primary:hover{
-	background: var(--darkblue);
+	background:#333;
 	color:#fff;
 }
 .about-us .about-content .button .btn:last-child{
@@ -4670,7 +4658,6 @@ Version:1.0
 	padding: 50px;
 	box-shadow: 0px 0px 15px #0000001a;
 	height: 100%;
-	background: #e0f0e3;
 }
 .contact-us .single-info {
 	text-align: left;
@@ -4750,10 +4737,6 @@ Version:1.0
 .contact-us .form .button .btn {
 	height: 50px;
 	border: none;
-	background: var(--blackRussian);
-}
-.contact-us .form .button .btn:hover{
-	background: var(--green);
 }
 #myMap {
 	height: 500px;
@@ -4859,7 +4842,7 @@ Version:1.0
 	20. Start Footer CSS
 ===============================*/
 .footer{
-	background:#161623;
+	background:#222;
 }
 .footer .about {
 	padding-right: 50px;
