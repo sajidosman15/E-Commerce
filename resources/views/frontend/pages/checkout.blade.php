@@ -37,7 +37,7 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>First Name<span>*</span></label>
-                                            <input type="text" name="first_name" placeholder="" value="{{old('first_name')}}" value="{{old('first_name')}}">
+                                            <input type="text" name="first_name" placeholder="" value="{{old('first_name')}}">
                                             @error('first_name')
                                                 <span class='text-danger'>{{$message}}</span>
                                             @enderror
@@ -72,8 +72,8 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Country<span>*</span></label>
-                                            <select name="country" id="country">
+                                            <label>District<span>*</span></label>
+                                            <select name="district" id="district">
                                                 <option value="AF">Afghanistan</option>
                                                 <option value="AX">Åland Islands</option>
                                                 <option value="AL">Albania</option>
@@ -404,7 +404,19 @@
                                             {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
                                             <form-group>
                                                 <input name="payment_method"  type="radio" value="cod"> <label> Cash On Delivery</label><br>
-                                                <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label> 
+                                                <input name="payment_method"  type="radio" value="bkash"> <label> BKash</label> <br>
+                                                <input name="payment_method"  type="radio" value="rocket"> <label> Rocket</label> <br>
+                                                <div style="background-color:#FFEBA1;padding:5px;border-radius:5px">
+                                                    <label style="color:red;">NB: If you use BKash or Rocket, please enter your Transection ID.</label><br>
+                                                    @php
+                                                        $phone=DB::table('settings')->pluck('phone');
+                                                        $phone=$phone[0];
+                                                    @endphp
+                                                    <label>Account Number: {{$phone}}</label> <br>
+                                                    <label> Transection ID:</label><br>
+                                                    <input style="width:100%" name="trans_id"  type="text" value="{{old('trans_id')}}">
+                                                </div>
+
                                             </form-group>
                                             <br>
                                             @error('payment_method')
@@ -415,13 +427,17 @@
                                     </div>
                                 </div>
                                 <!--/ End Order Widget -->
+
+
                                 <!-- Payment Method Widget -->
-                                <div class="single-widget payement">
+                                <!-- <div class="single-widget payement">
                                     <div class="content">
                                         <img src="{{('backend/img/payment-method.png')}}" alt="#">
                                     </div>
-                                </div>
+                                </div> -->
                                 <!--/ End Payment Method Widget -->
+
+
                                 <!-- Button Widget -->
                                 <div class="single-widget get-button">
                                     <div class="content">

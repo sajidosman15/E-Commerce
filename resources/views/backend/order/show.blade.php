@@ -98,8 +98,14 @@
                     </tr>
                     <tr>
                         <td>Payment Method</td>
-                        <td> : @if($order->payment_method=='cod') Cash on Delivery @else Paypal @endif</td>
+                        <td> : @if($order->payment_method=='cod') Cash on Delivery @elseif($order->payment_method=='rocket') Rocket @else BKash @endif</td>
                     </tr>
+                    @if($order->payment_method!='cod')
+                    <tr>
+                        <td>Transection ID</td>
+                        <td> : {{$order->trans_id}}</td>
+                    </tr>
+                    @endif
                     <tr>
                         <td>Payment Status</td>
                         <td> : {{$order->payment_status}}</td>
@@ -129,8 +135,8 @@
                         <td> : {{$order->address1}}, {{$order->address2}}</td>
                     </tr>
                     <tr>
-                        <td>Country</td>
-                        <td> : {{$order->country}}</td>
+                        <td>District</td>
+                        <td> : {{$order->district}}</td>
                     </tr>
                     <tr>
                         <td>Post Code</td>
