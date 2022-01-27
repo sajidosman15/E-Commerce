@@ -1611,6 +1611,7 @@ Version:1.0
 	box-shadow: 0px 0px 15px #0000001a;
     padding: 10px;
 	border-radius: 5px;
+	height: 400px;
 }
 .midium-banner .single-banner img{
 	height:100%;
@@ -3751,8 +3752,9 @@ Version:1.0
    Start Shop Services CSS
 ========================================*/
 .shop-services.section {
-	padding: 80px 0 0px 0;
+	padding: 60px 0 0px 0;
 	background: #fff;
+	margin-bottom: 50px;
 }
 .shop-services.home{
 	padding:60px 0;
@@ -3907,6 +3909,7 @@ Version:1.0
 .about-us .about-content p {
 	line-height: 26px;
 	margin-bottom: 10px;
+	text-align: justify;
 }
 .about-us .about-content p:last-child{
 	margin:0;
@@ -4884,6 +4887,7 @@ Version:1.0
 .footer .about .text{
 	color:#fff;
 	font-weight: 400;
+	text-align: justify;
 }
 .footer .about .call {
 	color: #fff;
