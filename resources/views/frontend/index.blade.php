@@ -170,8 +170,8 @@
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%; color:red;">${{number_format($product->price,2)}}</del>
+                                                <span>৳ {{number_format($after_discount,2)}}</span>
+                                                <del style="padding-left:4%; color:red;">৳ {{number_format($product->price,2)}}</del>
                                             </div>
                                         </div>
                                     </div>
@@ -245,6 +245,7 @@
                                     // dd($photo);
                                     @endphp
                                     <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                    <span class="hot">Hot</span>
                                     <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                     {{-- <span class="out-of-stock">Hot</span> --}}
                                 </a>
@@ -261,11 +262,11 @@
                             <div class="product-content">
                                 <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
                                 <div class="product-price">
-                                    <span class="old">${{number_format($product->price,2)}}</span>
+                                    <span class="old">৳ {{number_format($product->price,2)}}</span>
                                     @php 
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
                                     @endphp
-                                    <span>${{number_format($after_discount,2)}}</span>
+                                    <span>৳{{number_format($after_discount,2)}}</span>
                                 </div>
                             </div>
                         </div>
@@ -313,7 +314,7 @@
                                 <div class="col-lg-6 col-md-6 col-12 no-padding">
                                     <div class="content">
                                         <h4 class="title"><a href="#">{{$product->title}}</a></h4>
-                                        <p class="price with-discount">${{number_format($product->discount,2)}}</p>
+                                        <p class="price with-discount">{{number_format($product->discount,0)}}% OFF</p>
                                     </div>
                                 </div>
                                 </div>
