@@ -120,6 +120,7 @@
     });
     });
 
+
     $(document).ready(function() {
       $('#quote').summernote({
         placeholder: "Write short Quote.....",
