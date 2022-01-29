@@ -38,7 +38,8 @@
 					<div class="shop-sidebar">
                         <!-- Single Widget -->
                         <div class="single-widget category homeCatChild">
-                            <!-- <h3 class="title">Categories</h3> -->
+                            <h3 class="title">Categories</h3>
+                            <div class="scrolling"">
                             <ul class="categor-list">
 								@php
 									// $category = new Category();
@@ -49,7 +50,7 @@
 									@foreach($menu as $cat_info)
 											@if($cat_info->child_cat->count()>0)
 												<li><a href="{{route('product-cat',$cat_info->slug)}}">{{$cat_info->title}}</a>
-													<ul>
+													<ul class="sub-cat">
 														@foreach($cat_info->child_cat as $sub_menu)
 															<li><a href="{{route('product-sub-cat',[$cat_info->slug,$sub_menu->slug])}}">{{$sub_menu->title}}</a></li>
 														@endforeach
@@ -67,6 +68,8 @@
 									@endif
                                 @endforeach --}}
                             </ul>
+                            </div>
+                            
                         </div>
                         <!--/ End Single Widget -->
                 	</div>
@@ -642,7 +645,6 @@
             display:flex;
             /* margin:0% 5%; */
             height: 540px;
-            background-color:#F2F2F2;
             padding: 2% 5%;
             box-sizing:border-box;
         }
@@ -654,11 +656,22 @@
         }
 
         .homeCatChild{
-            background-color:#136594 !important;
+            background-color:#F6F7FB !important;
+        }
+        .scrolling{
+            overflow-y: scroll;
+            height: 375px;
+        }
+        .scrolling::-webkit-scrollbar {
+        display: none;
         }
 
         .shop-sidebar .categor-list li a {
-            color:White;
+            color: #666;
+            list-style: none;
+        }
+        .shop-sidebar .categor-list .sub-cat li a::before{
+            content: "\f0da";
         }
 
         .shop-sidebar .categor-list li a:before {
@@ -667,7 +680,7 @@
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            content: "\f0da";
+            
             font-size: 12px;
             color: rgba(0, 0, 0, 0.4);
             vertical-align: middle;
