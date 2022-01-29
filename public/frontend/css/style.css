@@ -549,7 +549,7 @@ Version:1.0
 	border: 1px solid #ededed;
 }
 .header .shopping-list li .remove:hover{
-	background:#222;
+	background:red;
 	color:#fff !important;
 	border-color:transparent;
 }
@@ -3036,6 +3036,9 @@ Version:1.0
 }
 .shopping-cart .table .remove-icon{
 	font-size:16px;
+}
+.shopping-cart .table td .remove-icon:hover{
+	color: red;
 }
 .shopping-cart .table td {
 	vertical-align: middle;
