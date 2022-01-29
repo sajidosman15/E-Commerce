@@ -1890,11 +1890,12 @@ Version:1.0
 }
 .single-product .product-img .product-action a i {
   line-height: 40px;
+  /* color: red; */
 }
 .single-product .product-img .product-action a span {
 	visibility: hidden;
 	position: absolute;
-	background: #F7941D !important;
+	background: red !important;
 	color: #fff !important;
 	text-align: center;
 	padding: 5px 12px;
@@ -1918,13 +1919,14 @@ Version:1.0
 	content: "";
 	right: 0;
 	bottom: -12px;
-	border: 6px solid #F7941D;
+	border: 6px solid red;
 	border-left:0px solid transparent;
 	border-right:6px solid transparent;
 	border-bottom:6px solid transparent;
 }
 .single-product .product-img .product-action a:hover {
-	color:#F7941D;
+	color: red;
+	
 }
 .single-product .product-img .product-action a:hover span {
   visibility: visible;
