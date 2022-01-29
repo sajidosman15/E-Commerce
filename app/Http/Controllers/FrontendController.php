@@ -235,6 +235,7 @@ class FrontendController extends Controller
         }
 
     }
+    
     public function productSubCat(Request $request){
         $products=Category::getProductBySubCat($request->sub_slug);
         // return $products;
