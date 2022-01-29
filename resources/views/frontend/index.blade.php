@@ -28,8 +28,55 @@
     </div> --}}
     <!--/ End Single Slider -->
 </section>
-@if(count($banners)>0)
-    <section id="Gslider" class="carousel slide" data-ride="carousel">
+
+<section class="headerSlider">
+    <!-- Product Style 1 -->
+	<section class="product-area shop-sidebar shop-list shop section homeCategory">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="shop-sidebar">
+                        <!-- Single Widget -->
+                        <div class="single-widget category homeCatChild">
+                            <!-- <h3 class="title">Categories</h3> -->
+                            <ul class="categor-list">
+								@php
+									// $category = new Category();
+									$menu=App\Models\Category::getAllParentWithChild();
+								@endphp
+								@if($menu)
+								<li>
+									@foreach($menu as $cat_info)
+											@if($cat_info->child_cat->count()>0)
+												<li><a href="{{route('product-cat',$cat_info->slug)}}">{{$cat_info->title}}</a>
+													<ul>
+														@foreach($cat_info->child_cat as $sub_menu)
+															<li><a href="{{route('product-sub-cat',[$cat_info->slug,$sub_menu->slug])}}">{{$sub_menu->title}}</a></li>
+														@endforeach
+													</ul>
+												</li>
+											@else
+												<li><a href="{{route('product-cat',$cat_info->slug)}}">{{$cat_info->title}}</a></li>
+											@endif
+									@endforeach
+								</li>
+								@endif
+                                {{-- @foreach(Helper::productCategoryList('products') as $cat)
+                                    @if($cat->is_parent==1)
+										<li><a href="{{route('product-cat',$cat->slug)}}">{{$cat->title}}</a></li>
+									@endif
+                                @endforeach --}}
+                            </ul>
+                        </div>
+                        <!--/ End Single Widget -->
+                	</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ End Product Style 1  -->
+    @if(count($banners)>0)
+    <section id="Gslider" class="carousel slide mainSlider" data-ride="carousel">
         <ol class="carousel-indicators">
             @foreach($banners as $key=>$banner)
         <li data-target="#Gslider" data-slide-to="{{$key}}" class="{{(($key==0)? 'active' : '')}}"></li>
@@ -57,7 +104,9 @@
         <span class="sr-only">Next</span>
         </a>
     </section>
-@endif
+    @endif
+</section>
+
 
 <!--/ End Slider Area -->
 
@@ -569,7 +618,7 @@
         }
 
         #Gslider .carousel-inner .carousel-caption {
-        bottom: 60%;
+        bottom: 30%;
         }
 
         #Gslider .carousel-inner .carousel-caption h1 {
@@ -588,6 +637,84 @@
         #Gslider .carousel-indicators {
         bottom: 70px;
         }
+
+        .headerSlider{
+            display:flex;
+            /* margin:0% 5%; */
+            height: 540px;
+            background-color:#F2F2F2;
+            padding: 2% 5%;
+            box-sizing:border-box;
+        }
+
+        .homeCategory{
+            width:25%;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .homeCatChild{
+            background-color:#136594 !important;
+        }
+
+        .shop-sidebar .categor-list li a {
+            color:White;
+        }
+
+        .shop-sidebar .categor-list li a:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f0da";
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.4);
+            vertical-align: middle;
+            margin-right: 10px;
+            margin-top: -3px;
+        }
+
+        .category{
+            height:485px;
+        }
+
+        .mainSlider{
+            width:75%;
+        }
+
+        .first-slide{
+            height:485px;
+        }
+
+        #Gslider .carousel-inner {
+            height: 485px;
+        }
+
+        @media (max-width:1000px) {
+            .homeCategory{
+                display:none;
+                width:0%;
+            }
+            .mainSlider{
+                width:100%;
+            }
+        }
+
+        @media (max-width:550px) {
+            .headerSlider{
+                height: 420px;
+            }
+
+            .first-slide{
+                height:385px;
+            }
+
+            #Gslider .carousel-inner {
+                height: 385px;
+            }
+        }
+
     </style>
 @endpush
 
