@@ -1552,6 +1552,9 @@ Version:1.0
 .small-banner .single-banner {
 	overflow:hidden;
 	position:relative;
+	box-shadow: 0px 0px 15px #0000001a;	
+	border-radius: 5px;
+	padding: 5px;
 }
 .small-banner .single-banner img{
 	height: 350px;;
@@ -1559,6 +1562,10 @@ Version:1.0
 	-webkit-transition:all 0.4s ease;
 	-moz-transition:all 0.4s ease;
 	transition:all 0.4s ease;
+	
+}
+.small-banner .single-banner img:hover{
+	opacity: .8;
 }
 .small-banner .single-banner .content {
 	position: absolute;

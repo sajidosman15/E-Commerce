@@ -613,7 +613,7 @@
         }
 
         #Gslider .carousel-inner{
-        height: 550px;
+        height: 450px;
         }
         #Gslider .carousel-inner img{
             width: 100% !important;
@@ -660,7 +660,7 @@
         }
         .scrolling{
             overflow-y: scroll;
-            height: 375px;
+            height: 345px;
         }
         .scrolling::-webkit-scrollbar {
         display: none;
@@ -689,7 +689,7 @@
         }
 
         .category{
-            height:485px;
+            height: 450px;
         }
 
         .mainSlider{
@@ -697,11 +697,11 @@
         }
 
         .first-slide{
-            height:485px;
+            height:450px;
         }
 
         #Gslider .carousel-inner {
-            height: 485px;
+            height: 450px;
         }
 
         @media (max-width:1000px) {
