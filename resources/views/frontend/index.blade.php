@@ -318,7 +318,7 @@
                                     @php 
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
                                     @endphp
-                                    <span>৳{{number_format($after_discount,2)}}</span>
+                                    <span>৳ {{number_format($after_discount,2)}}</span>
                                 </div>
                             </div>
                         </div>
@@ -340,7 +340,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="shop-section-title">
-                            <h1>Latest Items</h1>
+                            <h1>Discount Items</h1>
                         </div>
                     </div>
                 </div>
@@ -670,6 +670,7 @@
             color: #666;
             list-style: none;
         }
+        
         .shop-sidebar .categor-list .sub-cat li a::before{
             content: "\f0da";
         }

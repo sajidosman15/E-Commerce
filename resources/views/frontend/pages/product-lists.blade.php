@@ -31,7 +31,8 @@
                                 <!-- Single Widget -->
                                 <div class="single-widget category">
                                     <h3 class="title">Categories</h3>
-                                    <ul class="categor-list">
+                                    <div class="scrolling">
+									<ul class="categor-list">
 										@php
 											// $category = new Category();
 											$menu=App\Models\Category::getAllParentWithChild();
@@ -59,6 +60,7 @@
 											@endif
                                         @endforeach --}}
                                     </ul>
+									</div>
                                 </div>
                                 <!--/ End Single Widget -->
                                 <!-- Shop By Price -->
@@ -375,6 +377,14 @@
         margin-top:10px;
         color: white;
     }
+
+	.scrolling{
+            overflow-y: scroll;
+            height: 345px;
+        }
+        .scrolling::-webkit-scrollbar {
+        display: none;
+        }
 </style>
 @endpush
 @push('scripts')
