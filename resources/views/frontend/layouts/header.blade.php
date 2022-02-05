@@ -49,7 +49,7 @@
                     <!--/ End Logo -->
                     <!-- Search Form -->
                     <div class="search-top">
-                        <div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
+                        <div style="display:inline-block" class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
                         <!-- Search Form -->
                         <div class="search-top">
                             <form class="search-form">
@@ -57,6 +57,7 @@
                                 <button value="search" type="submit"><i class="ti-search"></i></button>
                             </form>
                         </div>
+                        <div class="mobile-cart"><a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count2">{{Helper::cartCount()}}</span></a></div>
                         <!--/ End Search Form -->
                     </div>
                     <!--/ End Search Form -->
@@ -121,6 +122,7 @@
                                 </div>
                             @endauth
                             <!--/ End Shopping Item -->
+                            
                         </div>
                         {{-- <div class="sinlge-bar">
                             <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>

@@ -1055,6 +1055,25 @@ Version:1.0
 .header.shop .right-bar .sinlge-bar .single-icon:hover{
 	color:#F7941D;
 }
+
+.mobile-cart{
+	display:inline-block;
+	margin-left:4px;
+}
+
+.total-count2{
+	position: absolute;
+    top: -7px;
+    right: -8px;
+    background: #f6931d;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 11px;
+}
 .header.shop .right-bar .sinlge-bar .single-icon .total-count {
 	position: absolute;
 	top: -7px;
