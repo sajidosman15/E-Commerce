@@ -31,6 +31,7 @@
                                 <!-- Single Widget -->
                                 <div class="single-widget category">
                                     <h3 class="title">Categories</h3>
+                                    <div class="scrolling">
                                     <ul class="categor-list">
 										@php
 											// $category = new Category();
@@ -59,6 +60,7 @@
 											@endif
                                         @endforeach --}}
                                     </ul>
+                                    </div>
                                 </div>
                                 <!--/ End Single Widget -->
                                 <!-- Shop By Price -->
@@ -83,13 +85,13 @@
                                         </div>
                                         {{-- <ul class="check-box-list">
                                             <li>
-                                                <label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">$20 - $50<span class="count">(3)</span></label>
+                                                <label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">৳20 - ৳50<span class="count">(3)</span></label>
                                             </li>
                                             <li>
-                                                <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">$50 - $100<span class="count">(5)</span></label>
+                                                <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">৳50 - ৳100<span class="count">(5)</span></label>
                                             </li>
                                             <li>
-                                                <label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">$100 - $250<span class="count">(8)</span></label>
+                                                <label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">৳100 - ৳250<span class="count">(8)</span></label>
                                             </li>
                                         </ul> --}}
                                     </div>
@@ -112,7 +114,7 @@
                                                 @php
                                                     $org=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <p class="price"><del class="text-muted">${{number_format($product->price,2)}}</del>   ${{number_format($org,2)}}  </p>
+                                                <p class="price"><del class="text-muted">৳{{number_format($product->price,2)}}</del> <br> ৳{{number_format($org,2)}}  </p>
                                                 
                                             </div>
                                         </div>
@@ -202,8 +204,8 @@
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
+                                                <span>৳ {{number_format($after_discount,2)}}</span>
+                                                <del style="padding-left:4%;">৳ {{number_format($product->price,2)}}</del>
                                             </div>
                                         </div>
                                     </div>
@@ -295,7 +297,7 @@
                                             @php
                                                 $after_discount=($product->price-($product->price*$product->discount)/100);
                                             @endphp
-                                            <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
+                                            <h3><small><del class="text-muted">৳ {{number_format($product->price,2)}}</del></small>    ৳ {{number_format($after_discount,2)}}  </h3>
                                             <div class="quickview-peragraph">
                                                 <p>{!! html_entity_decode($product->summary) !!}</p>
                                             </div>
@@ -391,6 +393,13 @@
         margin-top:10px;
         color: white;
     }
+    .scrolling{
+            overflow-y: scroll;
+            height: 300px;
+        }
+        .scrolling::-webkit-scrollbar {
+        display: none;
+        }
 </style>
 @endpush
 @push('scripts')

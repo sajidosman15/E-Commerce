@@ -361,14 +361,14 @@
                                     <h2>CART  TOTALS</h2>
                                     <div class="content">
                                         <ul>
-										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>${{number_format(Helper::totalCartPrice(),2)}}</span></li>
+										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>৳ {{number_format(Helper::totalCartPrice(),2)}}</span></li>
                                             <li class="shipping">
                                                 <label>Shipping Cost<span class="red">*</span></label>
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
                                                     <select name="shipping" class="nice-select">
                                                         <option value="">Select your address</option>
                                                         @foreach(Helper::shipping() as $shipping)
-                                                        <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: ${{$shipping->price}}</option>
+                                                        <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: ৳ {{$shipping->price}}</option>
                                                         @endforeach
                                                     </select>
                                                     @error('shipping')
@@ -379,7 +379,7 @@
                                                 @endif
                                             </li>
                                             @if(session('coupon'))
-                                            <li class="coupon_price" data-price="{{session('coupon')['value']}}">You Save<span>${{number_format(session('coupon')['value'],2)}}</span></li>
+                                            <li class="coupon_price" data-price="{{session('coupon')['value']}}">You Save<span>৳{{number_format(session('coupon')['value'],2)}}</span></li>
                                             @endif
                                             @php
                                                 $total_amount=Helper::totalCartPrice();
@@ -388,9 +388,9 @@
                                                 }
                                             @endphp
                                             @if(session('coupon'))
-                                                <li class="last"  id="order_total_price">Total<span>${{number_format($total_amount,2)}}</span></li>
+                                                <li class="last"  id="order_total_price">Total<span>৳ {{number_format($total_amount,2)}}</span></li>
                                             @else
-                                                <li class="last"  id="order_total_price">Total<span>${{number_format($total_amount,2)}}</span></li>
+                                                <li class="last"  id="order_total_price">Total<span>৳ {{number_format($total_amount,2)}}</span></li>
                                             @endif
                                         </ul>
                                     </div>
@@ -403,9 +403,9 @@
                                         <div class="checkbox">
                                             {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
                                             <form-group>
-                                                <input name="payment_method"  type="radio" value="cod"> <label> Cash On Delivery</label><br>
-                                                <input name="payment_method"  type="radio" value="bkash"> <label> BKash</label> <br>
-                                                <input name="payment_method"  type="radio" value="rocket"> <label> Rocket</label> <br>
+                                                <input id="cd" name="payment_method"  type="radio" value="cod"> <label for="cd"> Cash On Delivery</label><br>
+                                                <input id="bk" name="payment_method"  type="radio" value="bkash"> <label for="bk"> BKash</label> <br>
+                                                <input id="rk" name="payment_method"  type="radio" value="rocket"> <label for="rk"> Rocket</label> <br>
                                                 <div style="background-color:#FFEBA1;padding:5px;border-radius:5px">
                                                     <label style="color:red;">NB: If you use BKash or Rocket, please enter your Transection ID.</label><br>
                                                     @php
@@ -464,7 +464,7 @@
                     <div class="single-service">
                         <i class="ti-rocket"></i>
                         <h4>Free shiping</h4>
-                        <p>Orders over $100</p>
+                        <p>Orders over ৳2000</p>
                     </div>
                     <!-- End Single Service -->
                 </div>
@@ -501,12 +501,12 @@
     <!-- End Shop Services -->
     
     <!-- Start Shop Newsletter  -->
-    <section class="shop-newsletter section">
+    <!-- <section class="shop-newsletter section">
         <div class="container">
             <div class="inner-top">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2 col-12">
-                        <!-- Start Newsletter Inner -->
+                        Start Newsletter Inner
                         <div class="inner">
                             <h4>Newsletter</h4>
                             <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
@@ -515,12 +515,12 @@
                                 <button class="btn">Subscribe</button>
                             </form>
                         </div>
-                        <!-- End Newsletter Inner -->
+                        End Newsletter Inner
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Shop Newsletter -->
 @endsection
 @push('styles')

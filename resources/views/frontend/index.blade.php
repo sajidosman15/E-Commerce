@@ -38,7 +38,8 @@
 					<div class="shop-sidebar">
                         <!-- Single Widget -->
                         <div class="single-widget category homeCatChild">
-                            <!-- <h3 class="title">Categories</h3> -->
+                            <h3 class="title">Categories</h3>
+                            <div class="scrolling"">
                             <ul class="categor-list">
 								@php
 									// $category = new Category();
@@ -49,7 +50,7 @@
 									@foreach($menu as $cat_info)
 											@if($cat_info->child_cat->count()>0)
 												<li><a href="{{route('product-cat',$cat_info->slug)}}">{{$cat_info->title}}</a>
-													<ul>
+													<ul class="sub-cat">
 														@foreach($cat_info->child_cat as $sub_menu)
 															<li><a href="{{route('product-sub-cat',[$cat_info->slug,$sub_menu->slug])}}">{{$sub_menu->title}}</a></li>
 														@endforeach
@@ -67,6 +68,8 @@
 									@endif
                                 @endforeach --}}
                             </ul>
+                            </div>
+                            
                         </div>
                         <!--/ End Single Widget -->
                 	</div>
@@ -315,7 +318,7 @@
                                     @php 
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
                                     @endphp
-                                    <span>৳{{number_format($after_discount,2)}}</span>
+                                    <span>৳ {{number_format($after_discount,2)}}</span>
                                 </div>
                             </div>
                         </div>
@@ -337,7 +340,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="shop-section-title">
-                            <h1>Latest Items</h1>
+                            <h1>Discount Items</h1>
                         </div>
                     </div>
                 </div>
@@ -402,7 +405,7 @@
                                 @php 
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
                                 @endphp
-                                <h1 class="price">${{number_format($after_discount)}} <s>${{number_format($data->price)}}</s></h1>
+                                <h1 class="price">৳ {{number_format($after_discount)}} <s>৳ {{number_format($data->price)}}</s></h1>
                                 <div class="coming-time">
                                     <div class="clearfix" data-countdown="2021/02/30"></div>
                                 </div>
@@ -528,7 +531,7 @@
                                         @php
                                             $after_discount=($product->price-($product->price*$product->discount)/100);
                                         @endphp
-                                        <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
+                                        <h3><small><del class="text-muted">৳{{number_format($product->price,2)}}</del></small>    ৳{{number_format($after_discount,2)}}  </h3>
                                         <div class="quickview-peragraph">
                                             <p>{!! html_entity_decode($product->summary) !!}</p>
                                         </div>
@@ -610,7 +613,7 @@
         }
 
         #Gslider .carousel-inner{
-        height: 550px;
+        height: 450px;
         }
         #Gslider .carousel-inner img{
             width: 100% !important;
@@ -642,7 +645,6 @@
             display:flex;
             /* margin:0% 5%; */
             height: 540px;
-            background-color:#F2F2F2;
             padding: 2% 5%;
             box-sizing:border-box;
         }
@@ -654,11 +656,23 @@
         }
 
         .homeCatChild{
-            background-color:#136594 !important;
+            background-color:#F6F7FB !important;
+        }
+        .scrolling{
+            overflow-y: scroll;
+            height: 345px;
+        }
+        .scrolling::-webkit-scrollbar {
+        display: none;
         }
 
         .shop-sidebar .categor-list li a {
-            color:White;
+            color: #666;
+            list-style: none;
+        }
+        
+        .shop-sidebar .categor-list .sub-cat li a::before{
+            content: "\f0da";
         }
 
         .shop-sidebar .categor-list li a:before {
@@ -667,7 +681,7 @@
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            content: "\f0da";
+            
             font-size: 12px;
             color: rgba(0, 0, 0, 0.4);
             vertical-align: middle;
@@ -676,7 +690,7 @@
         }
 
         .category{
-            height:485px;
+            height: 450px;
         }
 
         .mainSlider{
@@ -684,11 +698,11 @@
         }
 
         .first-slide{
-            height:485px;
+            height:450px;
         }
 
         #Gslider .carousel-inner {
-            height: 485px;
+            height: 450px;
         }
 
         @media (max-width:1000px) {
