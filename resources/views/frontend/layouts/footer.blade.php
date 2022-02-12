@@ -20,7 +20,7 @@
 						</div>
 						<!-- End Single Widget -->
 					</div>
-					<div class="col-lg-2 col-md-6 col-12">
+					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
 							<h4>Information</h4>
@@ -34,8 +34,8 @@
 						</div>
 						<!-- End Single Widget -->
 					</div>
-					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
+					<!-- <div class="col-lg-2 col-md-6 col-12">
+						Single Widget
 						<div class="single-footer links">
 							<h4>Customer Service</h4>
 							<ul>
@@ -46,18 +46,18 @@
 								<li><a href="#">Privacy Policy</a></li>
 							</ul>
 						</div>
-						<!-- End Single Widget -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
+						End Single Widget
+					</div> -->
+					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
 							<h4>Get In Tuch</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
-									<li>@foreach($settings as $data) {{$data->address}} @endforeach</li>
-									<li>@foreach($settings as $data) {{$data->email}} @endforeach</li>
-									<li>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
+									<li><i class="fa fa-location-arrow"></i> @foreach($settings as $data) {{$data->address}} @endforeach</li>
+									<li><i class="fa fa-envelope-open"></i>@foreach($settings as $data) {{$data->email}} @endforeach</li>
+									<li><i class="fa fa-phone"></i> @foreach($settings as $data) {{$data->phone}} @endforeach</li>
 								</ul>
 							</div>
 							<!-- End Single Widget -->

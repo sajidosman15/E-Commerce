@@ -2218,6 +2218,10 @@ Version:1.0
 .shop-sidebar .categor-list li a:hover{
 	color:#F7941D;
 }
+.shop-sidebar .categor-list ul a:hover{
+	color:#F7941D;
+	padding-left: 15px;
+}
 /* Recent Post */
 .shop-sidebar .single-post {
 	position: relative;
@@ -3022,6 +3026,7 @@ Version:1.0
 .shopping-summery tbody tr {
 	border-bottom: 1px solid #F7941D;
 	margin-top: 20px;
+	
 }
 .shopping-summery tbody tr img {
 	border-radius: 0;
@@ -4729,7 +4734,7 @@ Version:1.0
 	text-align: center;
 	border-radius: 3px;
 	line-height: 40px;
-	background:#F7941D;
+	background: #F7941D;
 }
 .contact-us .single-info ul
 .contact-us .single-info ul li{
@@ -4951,13 +4956,16 @@ Version:1.0
 	color:#F7941D;
 	padding-left:10px;
 }
-.footer .social{}
+.footer .social .contact i{
+	padding-right: 10px;
+	color: #F7941D;
+}
 .footer .social .contact{}
 .footer .social .contact ul{}
 .footer .social .contact ul li {
 	color: #fff;
 	display: block;
-	margin-bottom: 4px;
+	margin-bottom: 6px;
 	font-weight: 400;
 }
 .footer .contact ul li:last-child{
