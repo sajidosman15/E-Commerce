@@ -6396,7 +6396,7 @@ a.bg-secondary:focus, a.bg-secondary:hover, button.bg-secondary:focus, button.bg
 }
 
 .bg-success {
-    background-color: #1cc88a !important
+    background-color: #d2afff !important
 }
 
 a.bg-success:focus, a.bg-success:hover, button.bg-success:focus, button.bg-success:hover {
@@ -10195,7 +10195,7 @@ a:focus {
 }
 
 .border-left-success {
-    border-left: .25rem solid #1cc88a !important
+    border-left: .25rem solid #d2afff !important
 }
 
 .border-bottom-success {
@@ -10444,7 +10444,7 @@ a:focus {
 }
 
 .topbar.navbar-light .navbar-nav .nav-item .nav-link {
-    color: #d1d3e2
+    color: 	#be29ec;
 }
 
 .topbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
