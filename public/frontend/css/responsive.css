@@ -860,10 +860,10 @@ Version:1.0
 	padding: .75rem;
 	vertical-align: top;
 	border-top: 1px solid #e9ecef;
-	display: block;
+	display: inline-block;
 	height: auto;
 	text-align: left !important;
-	padding-left: calc(50% + 20px) !important;
+	padding-left: calc(45% + 20px) !important;
 	width: 100%;
 	position: relative;
 	padding-left: 91px;
@@ -873,6 +873,7 @@ Version:1.0
 	padding: 0;
 	width: 35px;
 }
+
 .shopping-cart .table td::before {
 	content: attr(data-title);
 	display: block;
@@ -887,14 +888,16 @@ Version:1.0
 	width: 50%;
 	height: 100%;
 	border-bottom: 1px solid #e6ebee;
-	background: #F7941D;
-	color: #fff;
+	/* background: #F7941D;
+	color: #fff; */
 	border: none;
 }
 .shopping-cart .table td {
 	vertical-align: middle;
 	padding: 10px;
 	border-bottom: 1px solid #eee;
+}
+
 }
 .shopping-summery thead tr th {
 	padding: 10px;
