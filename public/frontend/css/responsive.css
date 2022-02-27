@@ -965,6 +965,7 @@ Version:1.0
 }
 .contact-us .form-main {
 	padding: 30px;
+
 }
 .contact-us .form .button .btn {
 	height: auto;
@@ -982,7 +983,7 @@ Version:1.0
 }
 .contact-us .single-head {
 	padding: 30px;
-	margin-top: 30px;
+	/* margin-top: 30px; */
 }
 .contact-us .form .form-group input {
 	height: 40px;
