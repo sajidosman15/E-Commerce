@@ -486,11 +486,10 @@
                                                     $photo=explode(',',$product->photo);
                                                 // dd($photo);
                                                 @endphp
-                                                @foreach($photo as $data)
-                                                    <div class="single-slider">
-                                                        <img src="{{$data}}" alt="{{$data}}">
-                                                    </div>
-                                                @endforeach
+                                                <div class="single-slider">
+                                                    <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                                </div>
+
                                             </div>
                                         </div>
                                     <!-- End Product slider -->
@@ -703,6 +702,30 @@
 
         #Gslider .carousel-inner {
             height: 450px;
+        }
+
+        .modal-dialog .quickview-slider-active img{
+            height: 460px;
+            width: 518px;
+        }
+
+        @media (max-width:1200px) {
+            .modal-dialog .quickview-slider-active img{
+                height: 460px;
+                width: 450px;
+            }
+        }
+
+        @media (max-width:990px) {
+            .modal-dialog .quickview-slider-active img{
+                height: 400px;
+            }
+        }
+
+        @media (max-width:450px) {
+            .modal-dialog .quickview-slider-active img{
+                height: 300px;
+            }
         }
 
         @media (max-width:1000px) {
