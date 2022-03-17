@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col-12">
 					<!-- Shopping Summery -->
-					<table class="table shopping-summery">
+					<table class="table shopping-summery table-striped">
 						<thead>
 							<tr class="main-hading">
 								<th>PRODUCT</th>
