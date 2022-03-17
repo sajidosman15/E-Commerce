@@ -73,11 +73,11 @@
 										</tr>
 									@endforeach
 									<track>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="hide_on_mobile"></td>
+										<td class="hide_on_mobile"></td>
+										<td class="hide_on_mobile"></td>
+										<td class="hide_on_mobile"></td>
+										<td class="hide_on_mobile"></td>
 										<td class="float-right">
 											<button class="btn float-right" type="submit">Update</button>
 										</td>
