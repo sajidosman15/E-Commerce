@@ -74,6 +74,7 @@
                                         <div class="form-group">
                                             <label>Country<span>*</span></label>
                                             <select name="district" id="country">
+                                                <option value="" selected='selected'>select your country</option>
                                                 <option value="AF">Afghanistan</option>
                                                 <option value="AX">Åland Islands</option>
                                                 <option value="AL">Albania</option>
@@ -92,7 +93,7 @@
                                                 <option value="AZ">Azerbaijan</option>
                                                 <option value="BS">Bahamas</option>
                                                 <option value="BH">Bahrain</option>
-                                                <option value="BD" selected="selected">Bangladesh</option>
+                                                <option value="BD">Bangladesh</option>
                                                 <option value="BB">Barbados</option>
                                                 <option value="BY">Belarus</option>
                                                 <option value="BE">Belgium</option>
