@@ -8,7 +8,7 @@
   </h5>
   <div class="card-body">
     @if($order)
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover table-responsive-lg">
       <thead>
         <tr>
             <th>S.N.</th>
