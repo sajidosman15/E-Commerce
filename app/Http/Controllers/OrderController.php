@@ -45,6 +45,13 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        $trans_method=$request->get('payment_method');
+        $option;
+        if($trans_method=='bkash' || $trans_method=='rocket'){
+            $option='required';
+        }else{
+            $option='nullable';
+        }
         $this->validate($request,[
             'first_name'=>'string|required',
             'last_name'=>'string|required',
@@ -56,7 +63,7 @@ class OrderController extends Controller
             'email'=>'string|required',
             'shipping'=>'string|required',
             'payment_method'=>'string|required',
-            'trans_id'=>'string|nullable'
+            'trans_id'=>"string|{$option}"    
         ]);
         // return $request->all();
 

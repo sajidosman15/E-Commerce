@@ -33,31 +33,42 @@
                                 <h2>Make Your Checkout Here</h2>
                                 <p>Please register in order to checkout more quickly</p>
                                 <!-- Form -->
+                                @php
+                                if(strpos($user->name, " ") !== false){
+                                    $unames=explode(" ",$user->name,2);
+                                }
+                                else{
+                                    $unames[0]=$user->name;
+                                    $unames[1]=" ";
+                                }
+                                
+                                
+                                @endphp
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>First Name<span>*</span></label>
-                                            <input type="text" name="first_name" placeholder="" value="{{old('first_name')}}">
+                                            <input type="text" name="first_name" placeholder="" value="{{$unames[0]}}">
                                             @error('first_name')
-                                                <span class='text-danger'>{{$message}}</span>
+                                                <span class='text-danger'>First Name is invalid.</span>
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Last Name<span>*</span></label>
-                                            <input type="text" name="last_name" placeholder="" value="{{old('lat_name')}}">
+                                            <input type="text" name="last_name" placeholder="" value="{{$unames[1]}}">
                                             @error('last_name')
-                                                <span class='text-danger'>{{$message}}</span>
+                                                <span class='text-danger'>Last Name is invalid.</span>
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Email Address<span>*</span></label>
-                                            <input type="email" name="email" placeholder="" value="{{old('email')}}">
+                                            <input type="email" name="email" placeholder="" value="{{$user->email}}">
                                             @error('email')
-                                                <span class='text-danger'>{{$message}}</span>
+                                                <span class='text-danger'>Email is invalid.</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -66,7 +77,7 @@
                                             <label>Phone Number <span>*</span></label>
                                             <input type="number" name="phone" placeholder="" required value="{{old('phone')}}">
                                             @error('phone')
-                                                <span class='text-danger'>{{$message}}</span>
+                                                <span class='text-danger'>Phone is invalid.</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -328,7 +339,7 @@
                                             <label>Address Line 1<span>*</span></label>
                                             <input type="text" name="address1" placeholder="" value="{{old('address1')}}">
                                             @error('address1')
-                                                <span class='text-danger'>{{$message}}</span>
+                                                <span class='text-danger'>Address is invalid.</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -367,13 +378,13 @@
                                                 <label>Shipping Cost<span class="red">*</span></label>
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
                                                     <select name="shipping" class="nice-select">
-                                                        <option value="">Select your address</option>
+                                                        <option value="">Select shipping method</option>
                                                         @foreach(Helper::shipping() as $shipping)
                                                         <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: ৳ {{$shipping->price}}</option>
                                                         @endforeach
                                                     </select>
                                                     @error('shipping')
-                                                        <span class='text-danger'>{{$message}}</span>
+                                                        <span class='text-danger'>Shipping method is required.</span>
                                                     @enderror
                                                 @else 
                                                     <span>Free</span>
@@ -407,6 +418,9 @@
                                                 <input id="cd" name="payment_method"  type="radio" value="cod"> <label for="cd"> Cash On Delivery</label><br>
                                                 <input id="bk" name="payment_method"  type="radio" value="bkash"> <label for="bk"> BKash</label> <br>
                                                 <input id="rk" name="payment_method"  type="radio" value="rocket"> <label for="rk"> Rocket</label> <br>
+                                                @error('payment_method')
+                                                    <span class='text-danger'>Payment method type is required.</span>
+                                                @enderror
                                                 <div style="background-color:#FFEBA1;padding:5px;border-radius:5px">
                                                     <label style="color:red;">NB: If you use BKash or Rocket, please enter your Transection ID.</label><br>
                                                     @php
@@ -416,27 +430,19 @@
                                                     <label>Account Number: {{$phone}}</label> <br>
                                                     <label> Transection ID:</label><br>
                                                     <input style="width:100%" name="trans_id"  type="text" value="{{old('trans_id')}}">
+                                                    @error('trans_id')
+                                                        <span class='text-danger'>Transection Id is required.</span>
+                                                    @enderror
                                                 </div>
 
                                             </form-group>
                                             <br>
-                                            @error('payment_method')
-                                                <span class='text-danger'>{{$message}}</span>
-                                            @enderror
+                                            
                                             
                                         </div>
                                     </div>
                                 </div>
                                 <!--/ End Order Widget -->
-
-
-                                <!-- Payment Method Widget -->
-                                <!-- <div class="single-widget payement">
-                                    <div class="content">
-                                        <img src="{{('backend/img/payment-method.png')}}" alt="#">
-                                    </div>
-                                </div> -->
-                                <!--/ End Payment Method Widget -->
 
 
                                 <!-- Button Widget -->
@@ -501,28 +507,6 @@
     </section>
     <!-- End Shop Services -->
     
-    <!-- Start Shop Newsletter  -->
-    <!-- <section class="shop-newsletter section">
-        <div class="container">
-            <div class="inner-top">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2 col-12">
-                        Start Newsletter Inner
-                        <div class="inner">
-                            <h4>Newsletter</h4>
-                            <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
-                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                                <input name="EMAIL" placeholder="Your email address" required="" type="email">
-                                <button class="btn">Subscribe</button>
-                            </form>
-                        </div>
-                        End Newsletter Inner
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- End Shop Newsletter -->
 @endsection
 @push('styles')
 	<style>
@@ -604,5 +588,4 @@
 		});
 
 	</script>
-
 @endpush
