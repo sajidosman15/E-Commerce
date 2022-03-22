@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\User;
 use App\Models\Wishlist;
 use App\Models\Cart;
 use Illuminate\Support\Str;
@@ -250,6 +251,7 @@ class CartController extends Controller
         //     $cart->fill($data);
         //     $cart->save();
         // }
-        return view('frontend.pages.checkout');
+        $user=User::find(auth()->user()->id);
+        return view('frontend.pages.checkout')->with('user',$user);
     }
 }
