@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Checkout page')
+@section('title','Checkout | FabricGalleryBD')
 
 @section('main-content')
 
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Last Name<span>*</span></label>
+                                            <label>Last Name<span></span></label>
                                             <input type="text" name="last_name" placeholder="" value="{{$unames[1]}}">
                                             @error('last_name')
                                                 <span class='text-danger'>Last Name is invalid.</span>

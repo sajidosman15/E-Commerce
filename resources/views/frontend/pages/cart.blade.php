@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Cart Page')
+@section('title','Cart | FabricGalleryBD')
 @section('main-content')
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">

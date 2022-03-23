@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','E-SHOP || About Us')
+@section('title','About Us | FabricGalleryBD')
 
 @section('main-content')
 
@@ -30,7 +30,7 @@
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
-							<h3>Welcome To <span>Eshop</span></h3>
+							<h3>Welcome To <span>FabricGalleryBD</span></h3>
 							<p>@foreach($settings as $data) {!! html_entity_decode($data->description) !!} @endforeach</p>
 							<div class="button">
 								

@@ -54,7 +54,7 @@ class OrderController extends Controller
         }
         $this->validate($request,[
             'first_name'=>'string|required',
-            'last_name'=>'string|required',
+            'last_name'=>'string|nullable',
             'address1'=>'string|required',
             'address2'=>'string|nullable',
             'coupon'=>'nullable|numeric',

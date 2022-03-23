@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 
-@section('title','Admin Profile')
+@section('title','Admin Profile | FabricGalleryBD')
 
 @section('main-content')
 

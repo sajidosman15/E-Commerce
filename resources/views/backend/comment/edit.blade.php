@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 
-@section('title','Comment Edit')
+@section('title','Comment Edit | FabricGalleryBD')
 
 @section('main-content')
 <div class="card">
