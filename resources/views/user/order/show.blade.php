@@ -124,8 +124,8 @@
                         <td> : {{$order->address1}}, {{$order->address2}}</td>
                     </tr>
                     <tr>
-                        <td>Country</td>
-                        <td> : {{$order->country}}</td>
+                        <td>District</td>
+                        <td> : {{$order->district}}</td>
                     </tr>
                     <tr>
                         <td>Post Code</td>
