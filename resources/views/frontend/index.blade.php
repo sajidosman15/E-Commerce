@@ -619,24 +619,25 @@
         }
 
         #Gslider .carousel-inner .carousel-caption {
-        bottom: 30%;
+        bottom: 20%;
         }
 
         #Gslider .carousel-inner .carousel-caption h1 {
-        font-size: 50px;
+        font-size: 45px;
         font-weight: bold;
         line-height: 100%;
-        color: #F7941D;
+        color: whitesmoke;
         }
 
         #Gslider .carousel-inner .carousel-caption p {
         font-size: 18px;
-        color: black;
+        color: #F7941D;
+        font-weight: 500;
         margin: 28px 0 28px 0;
         }
 
         #Gslider .carousel-indicators {
-        bottom: 70px;
+        bottom: 50px;
         }
 
         .headerSlider{
