@@ -246,7 +246,7 @@
 
 <!-- Start Small Banner  -->
 <section class="small-banner section">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             @php 
             $category_lists=DB::table('categories')->where('status','active')->where('is_parent','1')->limit(3)->get();

@@ -22,10 +22,10 @@
                                 @else 
                                     <li><i class="ti-user"></i> <a href="{{route('user')}}"  target="_blank">Dashboard</a></li>
                                 @endif
-                                <li><i class="ti-power-off"></i> <a href="{{route('user.logout')}}">Logout</a></li>
+                                <li><i class="fa fa-sign-out"></i> <a href="{{route('user.logout')}}">Logout</a></li>
 
                             @else
-                                <li><i class="ti-power-off"></i><a href="{{route('login.form')}}">Login /</a> <a href="{{route('register.form')}}">Register</a></li>
+                                <li><i class="fa fa-sign-in"></i><a href="{{route('login.form')}}">Login /</a> <a href="{{route('register.form')}}">Register</a></li>
                             @endauth
                         </ul>
                     </div>
@@ -58,7 +58,7 @@
                                 <button value="search" type="submit"><i class="ti-search"></i></button>
                             </form>
                         </div>
-                        <div class="mobile-cart"><a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count2">{{Helper::cartCount()}}</span></a></div>
+                        <div class="mobile-cart"><a href="{{route('cart')}}" class="single-icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i> <span class="total-count2">{{Helper::cartCount()}}</span></a></div>
                         <!--/ End Search Form -->
                     </div>
                     <!--/ End Search Form -->
@@ -129,7 +129,7 @@
                             <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                         </div> --}}
                         <div class="sinlge-bar shopping">
-                            <a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">{{Helper::cartCount()}}</span></a>
+                            <a href="{{route('cart')}}" class="single-icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="total-count">{{Helper::cartCount()}}</span></a>
                             <!-- Shopping Item -->
                             @auth
                                 <div class="shopping-item">

@@ -1042,7 +1042,7 @@
 	position: absolute;
 	top: -8px;
 	right: -8px;
-	background: #e90052;
+	background: #9500ff;
 	width: 18px;
 	height: 18px;
 	line-height: 18px;
@@ -1540,12 +1540,11 @@
 	padding: 5px;
 }
 .small-banner .single-banner img{
-	height: 350px;;
+	height: 320px;
 	width:100%;
 	-webkit-transition:all 0.4s ease;
 	-moz-transition:all 0.4s ease;
 	transition:all 0.4s ease;
-	
 }
 .small-banner .single-banner img:hover{
 	opacity: .8;
@@ -1804,7 +1803,7 @@
 	line-height: 25px;
 }
 .single-product .product-img a span.new {
-	background-color: #8493ca;
+	background-color: #9500ff;
 	display: inline-block;
 	font-size: 11px;
 	color: #fff;
