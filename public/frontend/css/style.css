@@ -134,7 +134,7 @@
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  background:#F7941D;
+  background: #9500ff;
   -webkit-animation: preloader-fx 1.6s linear infinite;
   animation: preloader-fx 1.6s linear infinite;
 }
@@ -266,7 +266,7 @@
 }
 .header .nav li .dropdown li a {
 	padding: 8px 15px;
-	color: #666;
+	color: white;
 	display: block;
 	font-weight: 400;
 	text-transform: capitalize;
@@ -387,7 +387,7 @@
 	display: inline-block;
 	margin-right: 4px;
 	font-size: 15px;
-	color: #F7941D;
+	color: #E50000;
 	position: relative;
 	top: 1px;
 }
@@ -974,7 +974,7 @@
 	color:#F7941D;
 }
 .header.shop .nav li .dropdown li a {
-	color: #333;
+	color: black;
 	padding: 8px 15px;
 	font-weight: 400;
 	background:#fff;
@@ -1027,22 +1027,22 @@
 
 .total-count2{
 	position: absolute;
-    top: -7px;
-    right: -8px;
-    background: #f6931d;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
-    text-align: center;
-    color: #fff;
-    border-radius: 100%;
-    font-size: 11px;
+	top: -7px;
+	right: -8px;
+	background: #9500ff;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	color: #fff;
+	border-radius: 100%;
+	font-size: 11px;
 }
 .header.shop .right-bar .sinlge-bar .single-icon .total-count {
 	position: absolute;
 	top: -7px;
 	right: -8px;
-	background: #f6931d;
+	background: #9500ff;
 	width: 18px;
 	height: 18px;
 	line-height: 18px;
@@ -4700,7 +4700,7 @@
 	text-align: center;
 	border-radius: 3px;
 	line-height: 40px;
-	background: #F7941D;
+	background: #9500ff;
 }
 .contact-us .single-info ul
 .contact-us .single-info ul li{

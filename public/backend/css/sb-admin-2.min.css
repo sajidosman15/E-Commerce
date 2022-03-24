@@ -7803,7 +7803,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .mr-1, .mx-1 {
-    margin-right: .25rem !important
+    margin-right: 2.25rem !important;
 }
 
 .mb-1, .my-1 {
