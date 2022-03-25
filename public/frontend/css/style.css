@@ -4976,6 +4976,13 @@
 	color:#fff;
 	text-decoration:underline;
 }
+.single-footer .logo a{
+	color: white;
+	text-decoration: none;
+	font-size: 22px;
+	font-family: poppins;
+	font-weight: bold;
+}
 /*=============================
 	End Footer CSS
 ===============================*/
