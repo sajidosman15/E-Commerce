@@ -71,13 +71,19 @@
 </style>
   <div class="invoice-header">
     <div class="float-left site-logo">
-      <img src="{{asset('backend/img/logo.png')}}" alt="">
+      <img style="width:350px;height:90px" src="{{asset('backend/img/logo.png')}}" alt="">
     </div>
+    @php 
+        $phone=DB::table('settings')->select('phone')->where('id',1)->get();
+    @endphp
+    @php 
+        $email=DB::table('settings')->select('email')->where('id',1)->get();
+    @endphp
     <div class="float-right site-address">
       <h4>{{env('APP_NAME')}}</h4>
       <p>{{env('APP_ADDRESS')}}</p>
-      <p>Phone: <a href="tel:{{env('APP_PHONE')}}">{{env('APP_PHONE')}}</a></p>
-      <p>Email: <a href="mailto:{{env('APP_EMAIL')}}">{{env('APP_EMAIL')}}</a></p>
+      <p>Phone: <a href="tel:{{env('APP_PHONE')}}">{{$phone}}</a></p>
+      <p>Email: <a href="mailto:{{env('APP_EMAIL')}}">{{$email}}</a></p>
     </div>
     <div class="clearfix"></div>
   </div>
@@ -87,8 +93,8 @@
        <h3>{{$order->first_name}} {{$order->last_name}}</h3>
        <div class="address">
         <p>
-          <strong>Country: </strong>
-          {{$order->country}}
+          <strong>District: </strong>
+          {{$order->district}}
         </p>
         <p>
           <strong>Address: </strong>
